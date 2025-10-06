@@ -2,6 +2,9 @@
 #include <stdbool.h>
 
 int main(void) {
+    short int at = 32770; // -32766
+    printf("%d\n", at);
+    printf("%u\n", at); // huge number
     int a = 4;
     short int b = 122;
     char c = 4;
