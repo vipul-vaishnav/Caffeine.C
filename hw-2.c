@@ -17,14 +17,14 @@ void q2() {
 }
 
 void q3() {
-    signed char a = 100;
-    signed char b = 200;
-    signed char c = a + b;
+    signed char a = 100; // 100
+    signed char b = 200; // 200 - 256 = -56
+    signed char c = a + b; // 100 - 56 = 44 
     printf("%d, %d, %d\n", a, b, c);
 }
 
 void q4() {
-    signed char a = 100;
+    signed char a = 100; 
     signed char b = 3;
     signed char c = 4;
     signed char r = a * b / c;
@@ -34,9 +34,21 @@ void q4() {
 void q5(void) {
     signed char a = 100;
     unsigned char b = 200;
-    unsigned char c = a + b;
+    unsigned char c = a + b; // 44
     printf("%d, %d, %d, %d\n", a, b, a + b, c); // 100, 200, 300, 44
-    return 0;
+}
+
+void q6() {
+    int k, i=50, j=100, l;
+    
+    i = i | (j && 100); 
+    
+    k = i || (j || 100);
+    
+    l = i & (j && 100);
+    
+    printf("%d %d\n", i, j);
+    printf("%d %d", k, l);
 }
 
 int main(void) {
@@ -45,5 +57,6 @@ int main(void) {
     q3();
     q4();
     q5();
+    q6();
     return 0;
 }
